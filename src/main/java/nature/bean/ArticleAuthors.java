@@ -11,7 +11,18 @@ import java.util.ArrayList;
 @AllArgsConstructor
 public class ArticleAuthors {
 
-    private ArrayList<Author> authors;
-    private Article article;
-
+    private long authorId;
+    private String authorName;
+    private String authorInformation;
+    private Long articleId;
+    private int indexId;
+    private String url;
+    private String title;
+    private java.sql.Date recevied;
+    private java.sql.Date accepted;
+    private java.sql.Date published_online;
+    private int web_of_Science;
+    private int crossRef;
+    private int scopus;
+    private int altmetric;
 }

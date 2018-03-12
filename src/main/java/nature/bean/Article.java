@@ -11,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Article {
 
+    private long id;
     private String URL;
     private String Title;
     private int Index_id;
@@ -21,6 +22,7 @@ public class Article {
     private int CrossRef;
     private int Scopus;
     private int Altmetric;
+    private double weight;
 
 }
 

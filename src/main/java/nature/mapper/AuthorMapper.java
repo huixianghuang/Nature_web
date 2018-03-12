@@ -13,9 +13,11 @@ import java.util.ArrayList;
 public interface AuthorMapper {
 
     @Select("select * from author where id = #{id}")
-    Author findById(int id);
+    Author findById(long id);
 
     @Select("select * from author where id >= #{start} and id <= #{end}")
     ArrayList<Author> findByIdRange(@Param("start") int start, @Param("end") int end);
 
+    @Select("SELECT * FROM author WHERE ID IN (SELECT author_id from author_article WHERE article_id = #{id})")
+    ArrayList<Author> findByArticleId(long id);
 }
